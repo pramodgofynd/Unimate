@@ -293,14 +293,19 @@ public class MajorFlowSanityPage extends BasePage  {
     
     public void awsIntialMachineSetup() throws InterruptedException{
     	chromeAcceptButton.click();
-    	chromeNoThanksButton.click();
+    	System.out.println("Clicked on the Accept button");
     	System.out.println(chromeNoThanksButton.getText());
+    	chromeNoThanksButton.click();
     	Thread.sleep(10000);
     	fbusername.sendKeys("pramod.kumar03@exclusively.com");
+    	System.out.println("Entered Username");
     	scroll(1);
     	password.sendKeys("ah@2305208606");
+    	System.out.println("Entered Password");
     	logIn.click();
+    	System.out.println("Clicked on login button");
     	FbContinue.click();
+    	System.out.println("Fb continue button");
     	Thread.sleep(3000);
     	FbAuthroization.click();
     	try {  		
