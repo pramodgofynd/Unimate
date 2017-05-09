@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="GoFyndWeb_TestSuite"  >
+  <listeners>
+     <!--  <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+       <listener class-name="commonlib.DynamicallyRunTestCases" /> 
+      <listener class-name="commonlib.TestListener" /> 
+      <listener class-name="commonlib.ExecutionListener" /> 
+       <listener class-name="com.digi.selenium.util.common.GroupRunnerListner" />-->    
+  </listeners>
+   <!--<test name="Sanity TestCases" thread-count="2" parallel="tests"> -->
+   	<test name="Sanity TestCases" >    	
+        <classes> 
+      		 <!-- Add the TestClasses -->
+           <!-- Sanity test Cases -->
+	        <!-- <class name="web.Gofynd" />-->	
+	         <class name="app.fynd.Tests.PlaceOrderSanity" />        
+		</classes> 
+		       
+    </test> 
+       <!-- <test name="Sanity TestCases2"> -->
+       <!-- <parameter name="deviceName_" value="TA93401NDG"/> -->
+		 <!--<parameter name="URL_" value="http://127.0.0.1:1234/wd/hub"/> -->	
+        <!--  <classes> -->
+      		 <!-- Add the TestClasses -->
+           <!-- Sanity test Cases -->
+	        <!-- <class name="web.Gofynd" />-->	
+	         <!-- <class name="android.AndroidApp" />  -->      
+		  <!--</classes>        -->
+    <!-- </test> -->
+   
+   
+</suite>

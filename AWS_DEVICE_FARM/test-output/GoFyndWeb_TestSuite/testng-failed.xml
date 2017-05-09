@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [GoFyndWeb_TestSuite]">
+  <test name="Sanity TestCases(failed)">
+    <classes>
+      <class name="app.fynd.Tests.PlaceOrderSanity">
+        <methods>
+          <include name="navigateTo"/>
+          <include name="placeOrderByBanner"/>
+          <include name="tearDownAppium"/>
+          <include name="placeOrderBySearch"/>
+          <include name="setUpAppium"/>
+          <include name="restartApp"/>
+          <include name="placeOrderByNotification"/>
+          <include name="setUpPage"/>
+        </methods>
+      </class> <!-- app.fynd.Tests.PlaceOrderSanity -->
+    </classes>
+  </test> <!-- Sanity TestCases(failed) -->
+</suite> <!-- Failed suite [GoFyndWeb_TestSuite] -->
