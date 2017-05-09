@@ -53,7 +53,7 @@ public class MajorFlowSanityPage extends BasePage  {
     /**
     * Chrome No thanks Button
     */    
-    @AndroidFindBy(id="com.android.chrome:id/negative_button")
+    @AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.Button\")")
     MobileElement chromeNoThanksButton;
     /**
     * Facebook Iframe Username Textbox
