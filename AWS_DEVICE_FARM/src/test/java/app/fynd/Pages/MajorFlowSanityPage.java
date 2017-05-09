@@ -240,8 +240,8 @@ public class MajorFlowSanityPage extends BasePage  {
     public void facebookLogin() throws InterruptedException {
         handlePermissionPopUp();
     	facebookButton.click();
-    	//awsIntialMachineSetup();
-    	localMachineSetup();
+    	awsIntialMachineSetup();
+    	//localMachineSetup();
     }
     
     /**
