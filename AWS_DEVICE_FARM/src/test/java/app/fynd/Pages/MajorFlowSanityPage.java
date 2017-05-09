@@ -53,7 +53,7 @@ public class MajorFlowSanityPage extends BasePage  {
     /**
     * Chrome No thanks Button
     */    
-    @AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.Button\")")
+    @AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.Button\").instance(1)")
     MobileElement chromeNoThanksButton;
     /**
     * Facebook Iframe Username Textbox
@@ -294,6 +294,8 @@ public class MajorFlowSanityPage extends BasePage  {
     public void awsIntialMachineSetup() throws InterruptedException{
     	chromeAcceptButton.click();
     	chromeNoThanksButton.click();
+    	System.out.println(chromeNoThanksButton.getText());
+    	Thread.sleep(3000);
     	fbusername.sendKeys("pramod.kumar03@exclusively.com");
     	scroll(1);
     	password.sendKeys("ah@2305208606");
