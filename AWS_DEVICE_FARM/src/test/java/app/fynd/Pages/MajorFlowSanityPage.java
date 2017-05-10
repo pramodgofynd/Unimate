@@ -59,8 +59,22 @@ public class MajorFlowSanityPage extends BasePage  {
     @AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.Button\").instance(1)")
     MobileElement chromeNoThanksButton;
     
-    @AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.Button\").instance(0)")
+    @AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.Button\")")
     MobileElement chromeClickFirstButton;
+    
+    @AndroidFindBy(accessibility="ACCEPT")
+    MobileElement acceptButton;
+    
+    @AndroidFindBy(accessibility="MORE")
+    MobileElement moreButton;
+    
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.android.vending:id/positive_button\")") 
+    MobileElement nextButton;
+    
+    @AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.RadioButton\").instance(2)")
+    MobileElement paymentOptionRemindMeLater;
+    
+    
     /**
     * Facebook Iframe Username Textbox
     */     
@@ -300,7 +314,7 @@ public class MajorFlowSanityPage extends BasePage  {
     public void awsIntialMachineSetup() throws InterruptedException{
     	chromeAcceptButton.click();
     	System.out.println("Clicked on the Accept button");
-    	System.out.println(chromeNoThanksButton.getText());
+    	//System.out.println(chromeNoThanksButton.getText());
     	//chromeNoThanksButton.click();
     	//click on SignIN
     	chromeNoThanksButton.click();
@@ -320,22 +334,23 @@ public class MajorFlowSanityPage extends BasePage  {
 //			// TODO: handle exception
 //		}
     	//Add the username
-    	fbusername.sendKeys("exapp2016@gmail.com");
-    	driver.getKeyboard().sendKeys(Keys.RETURN);
+    	fbusername.sendKeys("exapp2016@gmail.com"+"\n");
     	//Add password
-    	fbusername.sendKeys("ah@2305208606");
-    	driver.getKeyboard().sendKeys(Keys.RETURN);
-    	chromeClickFirstButton.click();
-    	System.out.println(chromeClickFirstButton.getText());
-    	Thread.sleep(7000);
-    	chromeClickFirstButton.click();
+    	fbusername.sendKeys("ah@2305208606" +"\n");
+    	//chromeClickFirstButton.click();
+    	//System.out.println(chromeClickFirstButton.getText());
+    	//Thread.sleep(7000)
+    	acceptButton.click();
+    	Thread.sleep(2000);
+    	//moreButton.click();
+    	scroll(1);
     	Thread.sleep(2000);
     	chromeClickFirstButton.click();
     	Thread.sleep(2000);
+    	//select the reminder
+    	paymentOptionRemindMeLater.click();
     	chromeClickFirstButton.click();
-    	Thread.sleep(2000);
-    	chromeClickFirstButton.click();
-    	
+    	Thread.sleep(5000);
     	fbusername.sendKeys("pramod.kumar03@exclusively.com");
     	System.out.println("Entered Username");
     	scroll(1);
