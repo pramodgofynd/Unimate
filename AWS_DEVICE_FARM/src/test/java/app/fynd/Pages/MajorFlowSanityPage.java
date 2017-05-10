@@ -300,7 +300,7 @@ public class MajorFlowSanityPage extends BasePage  {
     	System.out.println(chromeNoThanksButton.getText());
     	//chromeNoThanksButton.click();
     	//click on SignIN
-
+    	chromeNoThanksButton.click();
     	
     	try {
     		do {
