@@ -21,6 +21,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -32,6 +33,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.SwipeElementDirection;
+import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 /**
@@ -303,28 +305,28 @@ public class MajorFlowSanityPage extends BasePage  {
     	//click on SignIN
     	chromeNoThanksButton.click();
     	
-    	try {
-    		do {
-    			
-    			System.out.println(chromeClickFirstButton.getText());
-    			chromeClickFirstButton.click();
-    			
-    			Thread.sleep(3000);
-				
-			} while (chromeClickFirstButton.isDisplayed());
-    		
-			
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
+//    	try {
+//    		do {
+//    			
+//    			System.out.println(chromeClickFirstButton.getText());
+//    			chromeClickFirstButton.click();
+//    			
+//    			Thread.sleep(3000);
+//				
+//			} while (chromeClickFirstButton.isDisplayed());
+//    		
+//			
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//		}
     	//Add the username
     	fbusername.sendKeys("exapp2016@gmail.com");
-    	scroll(1);
-    	chromeClickFirstButton.click();
+    	driver.getKeyboard().sendKeys(Keys.RETURN);
     	//Add password
     	fbusername.sendKeys("ah@2305208606");
-    	scroll(1);
+    	driver.getKeyboard().sendKeys(Keys.RETURN);
     	chromeClickFirstButton.click();
+    	System.out.println(chromeClickFirstButton.getText());
     	Thread.sleep(7000);
     	chromeClickFirstButton.click();
     	Thread.sleep(2000);
