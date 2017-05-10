@@ -53,8 +53,11 @@ public class MajorFlowSanityPage extends BasePage  {
     /**
     * Chrome No thanks Button
     */    
-    @AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.Button\").instance(0)")
+    @AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.Button\").instance(1)")
     MobileElement chromeNoThanksButton;
+    
+    @AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.Button\").instance(0)")
+    MobileElement chromeClickFirstButton;
     /**
     * Facebook Iframe Username Textbox
     */     
@@ -295,8 +298,24 @@ public class MajorFlowSanityPage extends BasePage  {
     	chromeAcceptButton.click();
     	System.out.println("Clicked on the Accept button");
     	System.out.println(chromeNoThanksButton.getText());
-    	chromeNoThanksButton.click();
-    	Thread.sleep(10000);
+    	//chromeNoThanksButton.click();
+    	//click on SignIN
+    	chromeClickFirstButton.click();
+    	//Add the username
+    	fbusername.sendKeys("exapp2016@gmail.com");
+    	chromeClickFirstButton.click();
+    	//Add password
+    	fbusername.sendKeys("ah@2305208606");
+    	chromeClickFirstButton.click();
+    	Thread.sleep(7000);
+    	chromeClickFirstButton.click();
+    	Thread.sleep(2000);
+    	chromeClickFirstButton.click();
+    	Thread.sleep(2000);
+    	chromeClickFirstButton.click();
+    	Thread.sleep(2000);
+    	chromeClickFirstButton.click();
+    	
     	fbusername.sendKeys("pramod.kumar03@exclusively.com");
     	System.out.println("Entered Username");
     	scroll(1);
