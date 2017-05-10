@@ -6,9 +6,12 @@
       <class name="app.fynd.Tests.PlaceOrderSanity">
         <methods>
           <include name="navigateTo"/>
+          <include name="placeOrderByBanner"/>
+          <include name="tearDownAppium"/>
+          <include name="placeOrderBySearch"/>
           <include name="setUpAppium"/>
           <include name="restartApp"/>
-          <include name="placeOrderByMyFynd"/>
+          <include name="placeOrderByNotification"/>
           <include name="setUpPage"/>
         </methods>
       </class> <!-- app.fynd.Tests.PlaceOrderSanity -->

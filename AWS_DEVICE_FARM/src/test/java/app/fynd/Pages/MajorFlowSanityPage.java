@@ -300,7 +300,20 @@ public class MajorFlowSanityPage extends BasePage  {
     	System.out.println(chromeNoThanksButton.getText());
     	//chromeNoThanksButton.click();
     	//click on SignIN
-    	chromeClickFirstButton.click();
+
+    	
+    	try {
+    		do {
+    			
+    			chromeClickFirstButton.click();
+    			Thread.sleep(3000);
+				
+			} while (chromeClickFirstButton.isDisplayed());
+    		
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
     	//Add the username
     	fbusername.sendKeys("exapp2016@gmail.com");
     	chromeClickFirstButton.click();
