@@ -31,6 +31,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.SwipeElementDirection;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 /**
@@ -307,6 +308,7 @@ public class MajorFlowSanityPage extends BasePage  {
     			
     			System.out.println(chromeClickFirstButton.getText());
     			chromeClickFirstButton.click();
+    			
     			Thread.sleep(3000);
 				
 			} while (chromeClickFirstButton.isDisplayed());
@@ -317,9 +319,11 @@ public class MajorFlowSanityPage extends BasePage  {
 		}
     	//Add the username
     	fbusername.sendKeys("exapp2016@gmail.com");
+    	scroll(1);
     	chromeClickFirstButton.click();
     	//Add password
     	fbusername.sendKeys("ah@2305208606");
+    	scroll(1);
     	chromeClickFirstButton.click();
     	Thread.sleep(7000);
     	chromeClickFirstButton.click();
@@ -375,6 +379,7 @@ public class MajorFlowSanityPage extends BasePage  {
 		for (int i = 1; i <= times; i++) {
 			Thread.sleep(1000L);
 			driver.swipe(0,scrollStart,0,scrollEnd,2000);
+			
 			System.out.println("scrolled : "+ i);
 			
 		}	
