@@ -341,12 +341,13 @@ public class MajorFlowSanityPage extends BasePage  {
     	//System.out.println(chromeClickFirstButton.getText());
     	//Thread.sleep(7000)
     	acceptButton.click();
-    	Thread.sleep(2000);
+    	Thread.sleep(8000);
     	//moreButton.click();
     	scroll(1);
-    	Thread.sleep(2000);
-    	chromeClickFirstButton.click();
-    	Thread.sleep(2000);
+    	Thread.sleep(5000);
+    	//chromeClickFirstButton.click();
+    	nextButton.click();
+    	Thread.sleep(3000);
     	//select the reminder
     	paymentOptionRemindMeLater.click();
     	chromeClickFirstButton.click();
