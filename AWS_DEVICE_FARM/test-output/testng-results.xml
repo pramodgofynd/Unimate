@@ -2,24 +2,24 @@
 <testng-results skipped="2" failed="1" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="136418" started-at="2017-05-11T11:55:48Z" finished-at="2017-05-11T11:58:04Z">
+  <suite name="Default suite" duration-ms="135236" started-at="2017-05-11T11:59:08Z" finished-at="2017-05-11T12:01:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="136418" started-at="2017-05-11T11:55:48Z" finished-at="2017-05-11T11:58:04Z">
+    <test name="Default test" duration-ms="135236" started-at="2017-05-11T11:59:08Z" finished-at="2017-05-11T12:01:23Z">
       <class name="app.fynd.Tests.PlaceOrderSanity">
-        <test-method status="PASS" signature="setUpAppium()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="setUpAppium" is-config="true" duration-ms="14900" started-at="2017-05-11T17:25:33Z" finished-at="2017-05-11T17:25:48Z">
+        <test-method status="PASS" signature="setUpAppium()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="setUpAppium" is-config="true" duration-ms="11868" started-at="2017-05-11T17:28:56Z" finished-at="2017-05-11T17:29:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpAppium -->
-        <test-method status="PASS" signature="setUpPage()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="setUpPage" is-config="true" duration-ms="143" started-at="2017-05-11T17:25:48Z" finished-at="2017-05-11T17:25:48Z">
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="setUpPage" is-config="true" duration-ms="172" started-at="2017-05-11T17:29:08Z" finished-at="2017-05-11T17:29:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPage -->
-        <test-method status="PASS" signature="navigateTo()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="navigateTo" is-config="true" duration-ms="1" started-at="2017-05-11T17:25:48Z" finished-at="2017-05-11T17:25:48Z">
+        <test-method status="PASS" signature="navigateTo()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="navigateTo" is-config="true" duration-ms="0" started-at="2017-05-11T17:29:08Z" finished-at="2017-05-11T17:29:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateTo -->
-        <test-method status="FAIL" signature="placeOrderBySearch()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="placeOrderBySearch" duration-ms="128003" started-at="2017-05-11T17:25:48Z" finished-at="2017-05-11T17:27:56Z">
+        <test-method status="FAIL" signature="placeOrderBySearch()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="placeOrderBySearch" duration-ms="130472" started-at="2017-05-11T17:29:08Z" finished-at="2017-05-11T17:31:19Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[Can't locate an element by this strategy: Locator map: 
@@ -73,19 +73,19 @@ Driver info: driver.version: unknown
           <reporter-output>
           </reporter-output>
         </test-method> <!-- placeOrderBySearch -->
-        <test-method status="SKIP" signature="placeOrderByBanner()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="placeOrderByBanner" duration-ms="0" started-at="2017-05-11T17:27:56Z" depends-on-methods="app.fynd.Tests.PlaceOrderSanity.placeOrderBySearch" finished-at="2017-05-11T17:27:56Z">
+        <test-method status="SKIP" signature="placeOrderByBanner()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="placeOrderByBanner" duration-ms="0" started-at="2017-05-11T17:31:19Z" depends-on-methods="app.fynd.Tests.PlaceOrderSanity.placeOrderBySearch" finished-at="2017-05-11T17:31:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- placeOrderByBanner -->
-        <test-method status="SKIP" signature="placeOrderByNotification()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="placeOrderByNotification" duration-ms="0" started-at="2017-05-11T17:27:56Z" depends-on-methods="app.fynd.Tests.PlaceOrderSanity.placeOrderByBanner" finished-at="2017-05-11T17:27:56Z">
+        <test-method status="SKIP" signature="placeOrderByNotification()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="placeOrderByNotification" duration-ms="0" started-at="2017-05-11T17:31:19Z" depends-on-methods="app.fynd.Tests.PlaceOrderSanity.placeOrderByBanner" finished-at="2017-05-11T17:31:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- placeOrderByNotification -->
-        <test-method status="PASS" signature="restartApp()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="restartApp" is-config="true" duration-ms="8231" started-at="2017-05-11T17:27:56Z" finished-at="2017-05-11T17:28:04Z">
+        <test-method status="PASS" signature="restartApp()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="restartApp" is-config="true" duration-ms="4555" started-at="2017-05-11T17:31:19Z" finished-at="2017-05-11T17:31:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- restartApp -->
-        <test-method status="PASS" signature="tearDownAppium()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="tearDownAppium" is-config="true" duration-ms="3492" started-at="2017-05-11T17:28:04Z" finished-at="2017-05-11T17:28:08Z">
+        <test-method status="PASS" signature="tearDownAppium()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="tearDownAppium" is-config="true" duration-ms="4625" started-at="2017-05-11T17:31:23Z" finished-at="2017-05-11T17:31:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAppium -->
