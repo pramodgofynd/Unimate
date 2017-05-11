@@ -424,7 +424,7 @@ public class MajorFlowSanityPage extends BasePage  {
     	Thread.sleep(2000);
     	
     	//fbusername.sendKeys(" 9999210126");
-    	fbusername.sendKeys("9999210126");
+    	fbusername.sendKeys("8700094255");
 
     	//scroll(1);
     	password.sendKeys("123456");
