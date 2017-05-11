@@ -2,47 +2,41 @@
 <testng-results skipped="2" failed="1" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="135236" started-at="2017-05-11T11:59:08Z" finished-at="2017-05-11T12:01:23Z">
+  <suite name="Default suite" duration-ms="129042" started-at="2017-05-11T12:49:59Z" finished-at="2017-05-11T12:52:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="135236" started-at="2017-05-11T11:59:08Z" finished-at="2017-05-11T12:01:23Z">
+    <test name="Default test" duration-ms="129042" started-at="2017-05-11T12:49:59Z" finished-at="2017-05-11T12:52:08Z">
       <class name="app.fynd.Tests.PlaceOrderSanity">
-        <test-method status="PASS" signature="setUpAppium()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="setUpAppium" is-config="true" duration-ms="11868" started-at="2017-05-11T17:28:56Z" finished-at="2017-05-11T17:29:08Z">
+        <test-method status="PASS" signature="setUpAppium()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="setUpAppium" is-config="true" duration-ms="12342" started-at="2017-05-11T18:19:46Z" finished-at="2017-05-11T18:19:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpAppium -->
-        <test-method status="PASS" signature="setUpPage()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="setUpPage" is-config="true" duration-ms="172" started-at="2017-05-11T17:29:08Z" finished-at="2017-05-11T17:29:08Z">
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="setUpPage" is-config="true" duration-ms="201" started-at="2017-05-11T18:19:59Z" finished-at="2017-05-11T18:19:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPage -->
-        <test-method status="PASS" signature="navigateTo()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="navigateTo" is-config="true" duration-ms="0" started-at="2017-05-11T17:29:08Z" finished-at="2017-05-11T17:29:08Z">
+        <test-method status="PASS" signature="navigateTo()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="navigateTo" is-config="true" duration-ms="1" started-at="2017-05-11T18:19:59Z" finished-at="2017-05-11T18:19:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateTo -->
-        <test-method status="FAIL" signature="placeOrderBySearch()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="placeOrderBySearch" duration-ms="130472" started-at="2017-05-11T17:29:08Z" finished-at="2017-05-11T17:31:19Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="FAIL" signature="placeOrderBySearch()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="placeOrderBySearch" duration-ms="124086" started-at="2017-05-11T18:19:59Z" finished-at="2017-05-11T18:22:03Z">
+          <exception class="java.lang.IndexOutOfBoundsException">
             <message>
-              <![CDATA[Can't locate an element by this strategy: Locator map: 
-- native content: "By.id: co.go.fynd.debug:id/brandTitle)" 
-- html content: "by id or name "productName""
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'PAM123', ip: '169.254.6.203', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
-Driver info: driver.version: unknown]]>
+              <![CDATA[Index: 6, Size: 1]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: Locator map: 
-- native content: "By.id: co.go.fynd.debug:id/brandTitle)" 
-- html content: "by id or name "productName""
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'PAM123', ip: '169.254.6.203', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
-Driver info: driver.version: unknown
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:110)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:57)
-	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.getText(<generated>)
-	at app.fynd.Pages.MajorFlowSanityPage.selectProduct(MajorFlowSanityPage.java:518)
-	at app.fynd.Tests.PlaceOrderSanity.placeOrderBySearch(PlaceOrderSanity.java:77)
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 6, Size: 1
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at io.appium.java_client.pagefactory.ElementListInterceptor.getObject(ElementListInterceptor.java:39)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.intercept(InterceptorOfAListOfElements.java:51)
+	at $java.util.ArrayList$$EnhancerByCGLIB$$c0a2d785.get(<generated>)
+	at app.fynd.Pages.MajorFlowSanityPage.selectPaymentMethod(MajorFlowSanityPage.java:660)
+	at app.fynd.Tests.PlaceOrderSanity.placeOrderBySearch(PlaceOrderSanity.java:87)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -69,23 +63,23 @@ Driver info: driver.version: unknown
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- placeOrderBySearch -->
-        <test-method status="SKIP" signature="placeOrderByBanner()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="placeOrderByBanner" duration-ms="0" started-at="2017-05-11T17:31:19Z" depends-on-methods="app.fynd.Tests.PlaceOrderSanity.placeOrderBySearch" finished-at="2017-05-11T17:31:19Z">
+        <test-method status="SKIP" signature="placeOrderByBanner()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="placeOrderByBanner" duration-ms="1" started-at="2017-05-11T18:22:03Z" depends-on-methods="app.fynd.Tests.PlaceOrderSanity.placeOrderBySearch" finished-at="2017-05-11T18:22:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- placeOrderByBanner -->
-        <test-method status="SKIP" signature="placeOrderByNotification()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="placeOrderByNotification" duration-ms="0" started-at="2017-05-11T17:31:19Z" depends-on-methods="app.fynd.Tests.PlaceOrderSanity.placeOrderByBanner" finished-at="2017-05-11T17:31:19Z">
+        <test-method status="SKIP" signature="placeOrderByNotification()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="placeOrderByNotification" duration-ms="1" started-at="2017-05-11T18:22:03Z" depends-on-methods="app.fynd.Tests.PlaceOrderSanity.placeOrderByBanner" finished-at="2017-05-11T18:22:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- placeOrderByNotification -->
-        <test-method status="PASS" signature="restartApp()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="restartApp" is-config="true" duration-ms="4555" started-at="2017-05-11T17:31:19Z" finished-at="2017-05-11T17:31:23Z">
+        <test-method status="PASS" signature="restartApp()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="restartApp" is-config="true" duration-ms="4721" started-at="2017-05-11T18:22:03Z" finished-at="2017-05-11T18:22:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- restartApp -->
-        <test-method status="PASS" signature="tearDownAppium()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="tearDownAppium" is-config="true" duration-ms="4625" started-at="2017-05-11T17:31:23Z" finished-at="2017-05-11T17:31:28Z">
+        <test-method status="PASS" signature="tearDownAppium()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="tearDownAppium" is-config="true" duration-ms="2734" started-at="2017-05-11T18:22:08Z" finished-at="2017-05-11T18:22:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAppium -->

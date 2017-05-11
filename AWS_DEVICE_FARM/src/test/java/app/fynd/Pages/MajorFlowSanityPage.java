@@ -141,7 +141,7 @@ public class MajorFlowSanityPage extends BasePage  {
     /**
     * Fynd app Product Name
     */  
-    @AndroidFindBy(id=appIdentifier+":id/brandTitle)")
+    @AndroidFindBy(id=appIdentifier+":id/brandTitle")
     MobileElement productName;
  
     /**
@@ -172,7 +172,7 @@ public class MajorFlowSanityPage extends BasePage  {
     /**
     * Fynd app Product Size
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId("+appIdentifier+":id/size_text\").clickable(true)")
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId("+"\""+appIdentifier+":id/size_text\").clickable(true)")
     MobileElement productSize;
     
     /**
@@ -279,6 +279,7 @@ public class MajorFlowSanityPage extends BasePage  {
     	//facebookButton.click();
     	TouchAction action = new TouchAction(driver);
     	action.longPress(mobileButton).release().perform();
+    	Thread.sleep(4000);
     	//awsIntialMachineSetup();
     	localMachineSetup();
     }
@@ -512,7 +513,7 @@ public class MajorFlowSanityPage extends BasePage  {
  
     public HashMap<String, String> selectProduct() throws InterruptedException{
 		//waitgetForPageLoadAndroid(60).until(ExpectedConditions.presenceOfElementLocated(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"co.go.fynd:id/prod_image\")"))).click();
-		scroll(1);
+
 		//String product_name = waitgetForPageLoadAndroid(60).until(ExpectedConditions.presenceOfElementLocated(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"co.go.fynd:id/brandTitle\")"))).getText();
 		//String product_price = waitgetForPageLoadAndroid(60).until(ExpectedConditions.presenceOfElementLocated(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"co.go.fynd:id/marked_down_price\")"))).getText();
 		String product_name = productName.getText();

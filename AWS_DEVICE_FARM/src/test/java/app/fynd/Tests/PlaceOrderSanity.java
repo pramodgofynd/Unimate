@@ -74,6 +74,7 @@ public class PlaceOrderSanity extends TestBase {
 
         majorFlowSanityPage.search("Play");
 		//selectBanner();
+        majorFlowSanityPage.scroll(1);
 		 HashMap<String, String> product_Details= majorFlowSanityPage.selectProduct();	 
 		 majorFlowSanityPage.scroll(3);
 		 majorFlowSanityPage.selectSize();
