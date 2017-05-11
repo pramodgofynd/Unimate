@@ -71,6 +71,9 @@ public class MajorFlowSanityPage extends BasePage  {
     @AndroidFindBy(accessibility="MORE")
     MobileElement moreButton;
     
+    @AndroidFindBy(accessibility="CONTINUE")
+    MobileElement continueButton;
+    
     @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.android.vending:id/positive_button\")") 
     MobileElement nextButton;
     
@@ -315,12 +318,12 @@ public class MajorFlowSanityPage extends BasePage  {
 
     
     public void awsIntialMachineSetup() throws InterruptedException{
-    	chromeAcceptButton.click();
+    	//chromeAcceptButton.click();
     	System.out.println("Clicked on the Accept button");
     	//System.out.println(chromeNoThanksButton.getText());
     	//chromeNoThanksButton.click();
     	//click on SignIN
-    	chromeNoThanksButton.click();
+    	//chromeNoThanksButton.click();
     	
 //    	try {
 //    		do {
@@ -343,11 +346,31 @@ public class MajorFlowSanityPage extends BasePage  {
     	//chromeClickFirstButton.click();
     	//System.out.println(chromeClickFirstButton.getText());
     	Thread.sleep(5000);
-    	acceptButton.click();
+    	//acceptButton.click();
+    	System.out.println(acceptButton.getText());
+    	System.out.println(acceptButton.isEnabled());
+    	acceptButton.tap(1, 1000);
+    	System.out.println("Clicked on the accept button");
     	//acceptButton.tap(1, 1000);
     	Thread.sleep(8000);
     	//System.out.println(acceptButton.isEnabled());
     	//moreButton.click();
+    	boolean isAcceptClicked=false;
+    	try {
+			
+    		isAcceptClicked=acceptButton.isDisplayed();
+    		
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+    	
+    	finally {
+			if (isAcceptClicked)
+			{
+				acceptButton.click();
+				System.out.println("again clicked on the Accept button");
+			}
+		}
     	scroll(1);
     	Thread.sleep(5000);
     	//chromeClickFirstButton.click();
@@ -356,7 +379,7 @@ public class MajorFlowSanityPage extends BasePage  {
     	//select the reminder
     	paymentOptionRemindMeLater.click();
     	Thread.sleep(3000);
-    	chromeClickFirstButton.click();
+    	continueButton.click();
     	Thread.sleep(5000);
     	fbusername.sendKeys("pramod.kumar03@exclusively.com");
     	System.out.println("Entered Username");
