@@ -423,7 +423,7 @@ public class MajorFlowSanityPage extends BasePage  {
     public void localMachineSetup() throws InterruptedException{
     	Thread.sleep(2000);
     	
-    	String number="99999210126";
+    	String number="9999210126";
     	fbusername.sendKeys(number);
     	password.sendKeys("123456");
     	//fbusername.sendKeys("8700094255");
