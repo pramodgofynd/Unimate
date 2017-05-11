@@ -318,12 +318,12 @@ public class MajorFlowSanityPage extends BasePage  {
 
     
     public void awsIntialMachineSetup() throws InterruptedException{
-    	//chromeAcceptButton.click();
+    	chromeAcceptButton.click();
     	System.out.println("Clicked on the Accept button");
     	//System.out.println(chromeNoThanksButton.getText());
     	//chromeNoThanksButton.click();
     	//click on SignIN
-    	//chromeNoThanksButton.click();
+    	chromeNoThanksButton.click();
     	
 //    	try {
 //    		do {
