@@ -62,9 +62,11 @@ public class MajorFlowSanityPage extends BasePage  {
     @AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.Button\")")
     MobileElement chromeClickFirstButton;
     
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"next\")")
-    MobileElement acceptButton;
+//    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"next\")")
+//    MobileElement acceptButton;
     
+    @AndroidFindBy(accessibility="ACCEPT")
+    MobileElement acceptButton;
     
     @AndroidFindBy(accessibility="MORE")
     MobileElement moreButton;
@@ -316,9 +318,9 @@ public class MajorFlowSanityPage extends BasePage  {
     	chromeAcceptButton.click();
     	System.out.println("Clicked on the Accept button");
     	//System.out.println(chromeNoThanksButton.getText());
-    	chromeNoThanksButton.click();
-    	//click on SignIN
     	//chromeNoThanksButton.click();
+    	//click on SignIN
+    	chromeNoThanksButton.click();
     	
 //    	try {
 //    		do {
@@ -353,6 +355,7 @@ public class MajorFlowSanityPage extends BasePage  {
     	Thread.sleep(3000);
     	//select the reminder
     	paymentOptionRemindMeLater.click();
+    	Thread.sleep(3000);
     	chromeClickFirstButton.click();
     	Thread.sleep(5000);
     	fbusername.sendKeys("pramod.kumar03@exclusively.com");
