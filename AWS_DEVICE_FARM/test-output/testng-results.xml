@@ -1,91 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="1" total="3" passed="1">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="195565" started-at="2017-05-11T14:27:12Z" finished-at="2017-05-11T14:30:27Z">
+  <suite name="Default suite" duration-ms="162059" started-at="2017-05-11T14:43:02Z" finished-at="2017-05-11T14:45:44Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="195565" started-at="2017-05-11T14:27:12Z" finished-at="2017-05-11T14:30:27Z">
+    <test name="Default test" duration-ms="162059" started-at="2017-05-11T14:43:02Z" finished-at="2017-05-11T14:45:44Z">
       <class name="app.fynd.Tests.PlaceOrderSanity">
-        <test-method status="PASS" signature="setUpAppium()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="setUpAppium" is-config="true" duration-ms="44997" started-at="2017-05-11T19:56:27Z" finished-at="2017-05-11T19:57:12Z">
+        <test-method status="PASS" signature="setUpAppium()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="setUpAppium" is-config="true" duration-ms="18257" started-at="2017-05-11T20:12:44Z" finished-at="2017-05-11T20:13:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpAppium -->
-        <test-method status="PASS" signature="setUpPage()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="setUpPage" is-config="true" duration-ms="169" started-at="2017-05-11T19:57:12Z" finished-at="2017-05-11T19:57:12Z">
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="setUpPage" is-config="true" duration-ms="188" started-at="2017-05-11T20:13:02Z" finished-at="2017-05-11T20:13:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPage -->
-        <test-method status="PASS" signature="navigateTo()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="navigateTo" is-config="true" duration-ms="1" started-at="2017-05-11T19:57:12Z" finished-at="2017-05-11T19:57:12Z">
+        <test-method status="PASS" signature="navigateTo()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="navigateTo" is-config="true" duration-ms="0" started-at="2017-05-11T20:13:02Z" finished-at="2017-05-11T20:13:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateTo -->
-        <test-method status="PASS" signature="placeOrderBySearch()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="placeOrderBySearch" duration-ms="153213" started-at="2017-05-11T19:57:12Z" finished-at="2017-05-11T19:59:45Z">
+        <test-method status="PASS" signature="placeOrderBySearch()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="placeOrderBySearch" duration-ms="156901" started-at="2017-05-11T20:13:02Z" finished-at="2017-05-11T20:15:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- placeOrderBySearch -->
-        <test-method status="FAIL" signature="placeOrderByBanner()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="placeOrderByBanner" duration-ms="36529" started-at="2017-05-11T19:59:45Z" depends-on-methods="app.fynd.Tests.PlaceOrderSanity.placeOrderBySearch" finished-at="2017-05-11T20:00:21Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Can't locate an element by this strategy: Locator map: 
-- native content: "By.id: co.go.fynd.debug:id/offer_image" 
-- html content: "by id or name "selectBanner""
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'PAM123', ip: '169.254.6.203', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
-Driver info: driver.version: unknown]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: Locator map: 
-- native content: "By.id: co.go.fynd.debug:id/offer_image" 
-- html content: "by id or name "selectBanner""
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'PAM123', ip: '169.254.6.203', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
-Driver info: driver.version: unknown
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:110)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:57)
-	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.click(<generated>)
-	at app.fynd.Pages.MajorFlowSanityPage.selectBanner(MajorFlowSanityPage.java:469)
-	at app.fynd.Tests.PlaceOrderSanity.placeOrderByBanner(PlaceOrderSanity.java:118)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- placeOrderByBanner -->
-        <test-method status="SKIP" signature="placeOrderByNotification()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="placeOrderByNotification" duration-ms="1" started-at="2017-05-11T20:00:21Z" depends-on-methods="app.fynd.Tests.PlaceOrderSanity.placeOrderByBanner" finished-at="2017-05-11T20:00:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- placeOrderByNotification -->
-        <test-method status="PASS" signature="restartApp()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="restartApp" is-config="true" duration-ms="5607" started-at="2017-05-11T20:00:21Z" finished-at="2017-05-11T20:00:27Z">
+        <test-method status="PASS" signature="restartApp()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="restartApp" is-config="true" duration-ms="4955" started-at="2017-05-11T20:15:39Z" finished-at="2017-05-11T20:15:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- restartApp -->
-        <test-method status="PASS" signature="tearDownAppium()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="tearDownAppium" is-config="true" duration-ms="2647" started-at="2017-05-11T20:00:27Z" finished-at="2017-05-11T20:00:30Z">
+        <test-method status="PASS" signature="tearDownAppium()[pri:0, instance:app.fynd.Tests.PlaceOrderSanity@4232c52b]" name="tearDownAppium" is-config="true" duration-ms="2696" started-at="2017-05-11T20:15:44Z" finished-at="2017-05-11T20:15:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAppium -->
