@@ -424,7 +424,7 @@ public class MajorFlowSanityPage extends BasePage  {
     	Thread.sleep(2000);
     	
     	//fbusername.sendKeys(" 9999210126");
-    	fbusername.setValue("9999210126");
+    	fbusername.sendKeys("9999210126");
 
     	//scroll(1);
     	password.sendKeys("123456");
@@ -526,13 +526,14 @@ public class MajorFlowSanityPage extends BasePage  {
 	}
 	
 	
-	public void search(String keyword){
+	public void search(String keyword) throws InterruptedException{
 		
 		//waitgetForPageLoadAndroid(60).until(ExpectedConditions.presenceOfElementLocated(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"co.go.fynd:id/home_search_container\")"))).click();
 		searchBox.click();
 		//waitgetForPageLoadAndroid(60).until(ExpectedConditions.presenceOfElementLocated(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"co.go.fynd:id/search_src_text\")"))).sendKeys("Shirts");
 		searchTextBox.sendKeys(keyword);
 		//waitgetForPageLoadAndroid(60).until(ExpectedConditions.presenceOfElementLocated(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"co.go.fynd:id/recycler_item_text_parent\")"))).click();
+		Thread.sleep(3000);
 		searchSuggestions.click();
 	}
 	
