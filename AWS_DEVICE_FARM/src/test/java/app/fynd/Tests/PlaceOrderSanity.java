@@ -103,7 +103,7 @@ public class PlaceOrderSanity extends TestBase {
      * @throws InterruptedException 
      * @throws MalformedURLException 
      */
-    @Test(enabled=true , dependsOnMethods="placeOrderBySearch")
+    @Test(enabled=false , dependsOnMethods="placeOrderBySearch")
     public void placeOrderByBanner() throws InterruptedException, MalformedURLException{
 		driver.navigate().back();
 		Thread.sleep(1000);
@@ -144,7 +144,7 @@ public class PlaceOrderSanity extends TestBase {
      * @throws InterruptedException 
      * @throws MalformedURLException 
      */
-    @Test(enabled=true ,dependsOnMethods="placeOrderByBanner")
+    @Test(enabled=false ,dependsOnMethods="placeOrderByBanner")
     public void placeOrderByNotification() throws InterruptedException, MalformedURLException{
 		driver.navigate().back();
 		Thread.sleep(1000);
