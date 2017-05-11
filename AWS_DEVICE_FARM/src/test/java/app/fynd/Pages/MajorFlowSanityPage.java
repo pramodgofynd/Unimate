@@ -316,9 +316,9 @@ public class MajorFlowSanityPage extends BasePage  {
     	chromeAcceptButton.click();
     	System.out.println("Clicked on the Accept button");
     	//System.out.println(chromeNoThanksButton.getText());
-    	//chromeNoThanksButton.click();
-    	//click on SignIN
     	chromeNoThanksButton.click();
+    	//click on SignIN
+    	//chromeNoThanksButton.click();
     	
 //    	try {
 //    		do {
@@ -340,16 +340,16 @@ public class MajorFlowSanityPage extends BasePage  {
     	fbusername.sendKeys("ah@2305208606" +"\n");
     	//chromeClickFirstButton.click();
     	//System.out.println(chromeClickFirstButton.getText());
-    	//Thread.sleep(7000)
+    	Thread.sleep(5000);
     	acceptButton.click();
     	//acceptButton.tap(1, 1000);
-    	Thread.sleep(4000);
-    	System.out.println(acceptButton.isEnabled());
+    	Thread.sleep(8000);
+    	//System.out.println(acceptButton.isEnabled());
     	//moreButton.click();
     	scroll(1);
     	Thread.sleep(5000);
     	//chromeClickFirstButton.click();
-    	nextButton.click();
+    	chromeClickFirstButton.click();
     	Thread.sleep(3000);
     	//select the reminder
     	paymentOptionRemindMeLater.click();
