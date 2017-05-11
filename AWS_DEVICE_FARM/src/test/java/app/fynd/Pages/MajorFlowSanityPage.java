@@ -62,8 +62,9 @@ public class MajorFlowSanityPage extends BasePage  {
     @AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.Button\")")
     MobileElement chromeClickFirstButton;
     
-    @AndroidFindBy(accessibility="ACCEPT")
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"next\")")
     MobileElement acceptButton;
+    
     
     @AndroidFindBy(accessibility="MORE")
     MobileElement moreButton;
@@ -341,8 +342,7 @@ public class MajorFlowSanityPage extends BasePage  {
     	//System.out.println(chromeClickFirstButton.getText());
     	//Thread.sleep(7000)
     	acceptButton.click();
-    	Thread.sleep(4000);
-    	acceptButton.click();
+    	//acceptButton.tap(1, 1000);
     	Thread.sleep(4000);
     	System.out.println(acceptButton.isEnabled());
     	//moreButton.click();
