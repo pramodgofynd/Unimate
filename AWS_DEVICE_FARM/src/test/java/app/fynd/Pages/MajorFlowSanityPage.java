@@ -33,6 +33,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.SwipeElementDirection;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
@@ -41,13 +42,21 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
  */
 public class MajorFlowSanityPage extends BasePage  {
 
-	boolean allowAccessPopUpDisplayed = false ;
-	
+	boolean allowAccessPopUpDisplayed = false;
+	final String appIdentifier = "co.go.fynd.debug";
     /**
     * The Facebook Login Button Clicked
     */  
-    @AndroidFindBy(id="co.go.fynd:id/button_facebook")
+    @AndroidFindBy(id= appIdentifier +":id/button_facebook")
     MobileElement facebookButton;
+
+    /**
+    * The mobile Login Button Clicked
+    */  
+    @AndroidFindBy(id=appIdentifier+":id/button_mobile")
+    MobileElement mobileButton;
+    
+    
     /**
     * The Chrome Accept term and Condition Button
     */    
@@ -109,12 +118,12 @@ public class MajorFlowSanityPage extends BasePage  {
     /**
     * Fynd allow access popup allow button
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/dialog_right_btn\")")
+    @AndroidFindBy(id = appIdentifier + ":id/dialog_right_btn")
     MobileElement allowContactAccess;
     /**
     * Fynd app first Banner
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/offer_image\")")
+    @AndroidFindBy(id= appIdentifier+":id/offer_image")
     MobileElement selectBanner;
  
     /**
@@ -126,67 +135,68 @@ public class MajorFlowSanityPage extends BasePage  {
     /**
     * Fynd app Product Image
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/prod_image\")")
+    @AndroidFindBy(id= appIdentifier +":id/prod_image")
     MobileElement productImage;
 
     /**
     * Fynd app Product Name
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/brandTitle\")")
+    @AndroidFindBy(id=appIdentifier+":id/brandTitle)")
     MobileElement productName;
  
     /**
     * Fynd app Product Price
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/marked_down_price\")")
+    @AndroidFindBy(id=appIdentifier +":id/marked_down_price")
     MobileElement productPrice;
 
     /**
     * Fynd app Search Box
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/home_search_container\")")
+    @AndroidFindBy(id=appIdentifier+":id/home_search_container")
     MobileElement searchBox;
     
     /**
     * Fynd app Search Text Box
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/search_src_text\")")
+    @AndroidFindBy(id=appIdentifier+":id/search_src_text")
     MobileElement searchTextBox;
   
     /**
     * Fynd app Search Second Selection Item
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/recycler_item_text_parent\")")
+   // @AndroidFindBy(id=appIdentifier+":id/recycler_item_text_parent")
+    @AndroidFindBy(id=appIdentifier+":id/tabText")
     MobileElement searchSuggestions;
  
     /**
     * Fynd app Product Size
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/size_text\").clickable(true)")
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId("+appIdentifier+":id/size_text\").clickable(true)")
     MobileElement productSize;
     
     /**
     * Fynd app PDP Buy Now Button
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/button_buy_now\")")
+    @AndroidFindBy(id= appIdentifier +":id/button_buy_now")
     MobileElement pdpBuyNowButton;
 
     /**
     * Fynd app cart Secure CheckOut Button
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/place_order\")")
+    @AndroidFindBy(id=appIdentifier+":id/place_order")
     MobileElement cartSecureCheckOutButton;
     
     /**
     * Fynd app Proceed Button
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/button_proceed\")")
+    @AndroidFindBy(id=appIdentifier+":id/button_proceed")
     MobileElement proceedButton;
 
     /**
     * Fynd app gif loader
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/progress_bar_gif\")")
+    @AndroidFindBy(id=appIdentifier+":id/progress_bar_gif")
     MobileElement gifLoader;
 
     /**
@@ -198,25 +208,25 @@ public class MajorFlowSanityPage extends BasePage  {
     /**
     * Fynd app payment error page dialog 'close' Button
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/action_profile\")")
+    @AndroidFindBy(id=appIdentifier+":id/action_profile")
     MobileElement paymentErrorPageCloseButton;
     
     /**
     * Fynd app cart Remove Item Button
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/remove_button\")")
+    @AndroidFindBy(id=appIdentifier+":id/remove_button")
     MobileElement cartRemoveButton;
  
     /**
     * Fynd app payment Selector
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/menu_icon\")")
+    @AndroidFindBy(id=appIdentifier+":id/menu_icon")
     List<WebElement> paymentSelector;
  
     /**
     * Fynd app Notification Icon
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/action_notification\")")
+    @AndroidFindBy(id=appIdentifier+":id/action_notification")
     MobileElement notificationIcon;
     
     /**
@@ -228,31 +238,31 @@ public class MajorFlowSanityPage extends BasePage  {
     /**
     * Fynd Brand page top sub menu
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/title\")")
+    @AndroidFindBy(id=appIdentifier+":id/title")
     MobileElement brandTopMenuList; 
  
     /**
     * Fynd Brand List follow button
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/follow\").className(\"android.widget.Button\")")
+    @AndroidFindBy(id=appIdentifier+":id/follow")
     List<WebElement> brandListFollowButton;
     
     /**
     * My Fynds collection brand
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/brand_collection_image\")")
+    @AndroidFindBy(id=appIdentifier+":id/brand_collection_image")
     MobileElement collectionImage;
 
     /**
     * My Fynds add to Bag Button
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/move_to_bag\")")
+    @AndroidFindBy(id = appIdentifier +":id/move_to_bag")
     MobileElement MyFyndsAddToBag;
  
     /**
     * My Fynds add to bag popup Click Button
     */  
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"co.go.fynd:id/save\")")
+    @AndroidFindBy(id=appIdentifier+":id/save")
     MobileElement MyFyndsBrandPopUpAddToBagButton;    
 
     public MajorFlowSanityPage(AppiumDriver driver) {
@@ -265,9 +275,12 @@ public class MajorFlowSanityPage extends BasePage  {
      */
     public void facebookLogin() throws InterruptedException {
         handlePermissionPopUp();
-    	facebookButton.click();
-    	awsIntialMachineSetup();
-    	//localMachineSetup();
+        //mobileButton.click();
+    	//facebookButton.click();
+    	TouchAction action = new TouchAction(driver);
+    	action.longPress(mobileButton).release().perform();
+    	//awsIntialMachineSetup();
+    	localMachineSetup();
     }
     
     /**
@@ -318,12 +331,12 @@ public class MajorFlowSanityPage extends BasePage  {
 
     
     public void awsIntialMachineSetup() throws InterruptedException{
-    	chromeAcceptButton.click();
+    	//chromeAcceptButton.click();
     	System.out.println("Clicked on the Accept button");
     	//System.out.println(chromeNoThanksButton.getText());
     	//chromeNoThanksButton.click();
     	//click on SignIN
-    	chromeNoThanksButton.click();
+    	//chromeNoThanksButton.click();
     	
 //    	try {
 //    		do {
@@ -407,12 +420,27 @@ public class MajorFlowSanityPage extends BasePage  {
     }
      
     public void localMachineSetup() throws InterruptedException{
-    	fbusername.sendKeys("pramod.kumar03@exclusively.com");
-    	scroll(1);
-    	password.sendKeys("ah@2305208606");
+    	Thread.sleep(2000);
+    	
+    	//fbusername.sendKeys(" 9999210126");
+    	fbusername.setValue("9999210126");
+
+    	//scroll(1);
+    	password.sendKeys("123456");
     	logIn.click();
-    	FbAuthroization.click();
-		allowContactAccess.click();
+    	Thread.sleep(5000);
+    	try {  		
+    		allowAccessPopUpDisplayed=allowContactAccess.isDisplayed();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+    	finally{
+        	if (allowAccessPopUpDisplayed)
+        	{
+        	allowContactAccess.click();
+        	}
+    	}
+		
         handlePermissionPopUp();
     }
     
@@ -482,9 +510,9 @@ public class MajorFlowSanityPage extends BasePage  {
 	}
 	
  
-    public HashMap<String, String> selectProduct(){
+    public HashMap<String, String> selectProduct() throws InterruptedException{
 		//waitgetForPageLoadAndroid(60).until(ExpectedConditions.presenceOfElementLocated(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"co.go.fynd:id/prod_image\")"))).click();
-		productImage.click();
+		scroll(1);
 		//String product_name = waitgetForPageLoadAndroid(60).until(ExpectedConditions.presenceOfElementLocated(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"co.go.fynd:id/brandTitle\")"))).getText();
 		//String product_price = waitgetForPageLoadAndroid(60).until(ExpectedConditions.presenceOfElementLocated(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"co.go.fynd:id/marked_down_price\")"))).getText();
 		String product_name = productName.getText();
@@ -492,6 +520,7 @@ public class MajorFlowSanityPage extends BasePage  {
 		HashMap<String, String> ProductDetails = new HashMap<>();
 		ProductDetails.put("name", product_name);
 		ProductDetails.put("price", product_price);
+		productImage.click();
 		return ProductDetails;
 	}
 	
