@@ -341,7 +341,10 @@ public class MajorFlowSanityPage extends BasePage  {
     	//System.out.println(chromeClickFirstButton.getText());
     	//Thread.sleep(7000)
     	acceptButton.click();
-    	Thread.sleep(8000);
+    	Thread.sleep(4000);
+    	acceptButton.click();
+    	Thread.sleep(4000);
+    	System.out.println(acceptButton.isEnabled());
     	//moreButton.click();
     	scroll(1);
     	Thread.sleep(5000);
