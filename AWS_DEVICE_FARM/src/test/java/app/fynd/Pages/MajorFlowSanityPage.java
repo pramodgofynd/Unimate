@@ -220,7 +220,7 @@ public class MajorFlowSanityPage extends BasePage  {
     /**
     * Fynd app payment Selector
     */  
-    @AndroidFindBy(id=appIdentifier+":id/menu_icon")
+    @AndroidFindBy(id=appIdentifier+":id/menu_title")
     List<WebElement> paymentSelector;
  
     /**
@@ -274,7 +274,7 @@ public class MajorFlowSanityPage extends BasePage  {
      * @throws InterruptedException 
      */
     public void facebookLogin() throws InterruptedException {
-        handlePermissionPopUp();
+        //handlePermissionPopUp();
         //mobileButton.click();
     	//facebookButton.click();
     	TouchAction action = new TouchAction(driver);
@@ -425,7 +425,19 @@ public class MajorFlowSanityPage extends BasePage  {
     	
     	String number="9999210126";
     	//fbusername.sendKeys(number);
-    	fbusername.setValue(number);
+    	
+    	
+    	do {
+    		fbusername.sendKeys(number);
+        	System.out.println(fbusername.getText());
+        	System.out.println(fbusername.getText()=="+91 999210126");
+        	if(fbusername.getText().equals("+91 9999210126")){
+        		System.out.println("Break Statement executed");
+        		break;
+        	}
+			
+		} while (fbusername.getText().equals("+91 999210126"));
+
     	password.sendKeys("123456");
     	//fbusername.sendKeys("8700094255");
 
@@ -645,60 +657,72 @@ public class MajorFlowSanityPage extends BasePage  {
 		//List<WebElement> paymentcontainers=getAndroidDriver().findElements(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"co.go.fynd:id/menu_icon\")"));
 		List<WebElement> paymentcontainers=paymentSelector;
 		
-		switch (paymentType) {
-		case "Add new cards":{
-			//TODO
-			paymentcontainers.get(3).click();
-		}
+		for (WebElement webElement : paymentcontainers) {
 			
-			break;
-		case "ICICI":{
-			paymentcontainers.get(4).click();
-		}
-			break;
-		case "HDFC":{
-			paymentcontainers.get(5).click();
-		}
-			break;	
+			System.out.println(webElement.getText());
+			if(webElement.getText().equals(paymentType)){
+				
+				webElement.click();
+				System.out.println("Selected the Axis ");
+				break;
+			}
 			
-		case "AXIS":{
-			paymentcontainers.get(6).click();
-		}
-			break;			
-			
-		case "SBI":{
-			paymentcontainers.get(7).click();
-		}
-			break;			
-		case "KOTAK":{
-			paymentcontainers.get(8).click();
-		}
-			break;		
-		case "PAYTM":{
-			paymentcontainers.get(9).click();
-		}
-			break;
-		case "MOBIKWIK":{
-			paymentcontainers.get(10).click();
-		}
-			break;	
-		case "PAYUMONEY":{
-			paymentcontainers.get(11).click();
-		}
-			break;
-		case "OLAMONEY":{
-			paymentcontainers.get(12).click();
-		}
-		case "FREECHARGE":{
-			paymentcontainers.get(13).click();
-		}
-			break;
-		default:{
-			paymentcontainers.get(4).click();
-		}
-			break;
 		}
 		
+//		switch (paymentType) {
+//		case "Add new cards":{
+//			//TODO
+//			paymentcontainers.get(3).click();
+//		}
+//			
+//			break;
+//		case "ICICI":{
+//			paymentcontainers.get(4).click();
+//		}
+//			break;
+//		case "HDFC":{
+//			paymentcontainers.get(5).click();
+//		}
+//			break;	
+//			
+//		case "AXIS":{
+//			paymentcontainers.get(6).click();
+//		}
+//			break;			
+//			
+//		case "SBI":{
+//			paymentcontainers.get(7).click();
+//		}
+//			break;			
+//		case "KOTAK":{
+//			paymentcontainers.get(8).click();
+//		}
+//			break;		
+//		case "PAYTM":{
+//			paymentcontainers.get(9).click();
+//		}
+//			break;
+//		case "MOBIKWIK":{
+//			paymentcontainers.get(10).click();
+//		}
+//			break;	
+//		case "PAYUMONEY":{
+//			paymentcontainers.get(11).click();
+//		}
+//			break;
+//		case "OLAMONEY":{
+//			paymentcontainers.get(12).click();
+//		}
+//		case "FREECHARGE":{
+//			paymentcontainers.get(13).click();
+//		}
+//			break;
+//		default:{
+//			paymentcontainers.get(4).click();
+//		}
+//			break;
+//		}
+//		
 		
 	}
 
