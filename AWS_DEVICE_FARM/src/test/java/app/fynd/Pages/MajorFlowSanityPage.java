@@ -506,7 +506,7 @@ public class MajorFlowSanityPage extends BasePage  {
     public void ScrolltoElementWithText(String text)
 	{
 		driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+text+"\"));"));
-		driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+text+"\"));"));
+		//driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+text+"\"));"));
 	}
 	
     public void handlePermissionPopUp(){
@@ -536,7 +536,9 @@ public class MajorFlowSanityPage extends BasePage  {
 		HashMap<String, String> ProductDetails = new HashMap<>();
 		ProductDetails.put("name", product_name);
 		ProductDetails.put("price", product_price);
+		Thread.sleep(2000);
 		productImage.click();
+		Thread.sleep(4000);
 		return ProductDetails;
 	}
 	
@@ -656,14 +658,17 @@ public class MajorFlowSanityPage extends BasePage  {
 		//waitgetForPageLoadAndroid(60).until(ExpectedConditions.presenceOfElementLocated(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"co.go.fynd:id/menu_icon\")"))).isDisplayed();
 		//List<WebElement> paymentcontainers=getAndroidDriver().findElements(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"co.go.fynd:id/menu_icon\")"));
 		List<WebElement> paymentcontainers=paymentSelector;
+//		int size =paymentcontainers.size();
+//		paymentcontainers.get(size).s
 		
+		ScrolltoElementWithText(paymentType);
 		for (WebElement webElement : paymentcontainers) {
 			
 			System.out.println(webElement.getText());
 			if(webElement.getText().equals(paymentType)){
 				
 				webElement.click();
-				System.out.println("Selected the Axis ");
+				System.out.println("Selected the Bank");
 				break;
 			}
 			
