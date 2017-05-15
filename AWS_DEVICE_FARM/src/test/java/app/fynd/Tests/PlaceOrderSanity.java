@@ -68,7 +68,7 @@ public class PlaceOrderSanity extends TestBase {
         //alertPage.clickAlertsButton();
     	
         Thread.sleep(3000);
-
+        
         majorFlowSanityPage.facebookLogin();
         System.out.println("facebookbutton is clicked");
 

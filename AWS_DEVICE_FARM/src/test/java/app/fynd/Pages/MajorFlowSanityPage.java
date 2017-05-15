@@ -475,6 +475,29 @@ public class MajorFlowSanityPage extends BasePage  {
 			
 		}	
 	}
+    
+    public void scroll(WebElement element) throws InterruptedException{	
+		
+    	boolean isDisplayed = false;
+		do {
+			try {
+				
+				isDisplayed = element.isDisplayed();
+				System.out.println(isDisplayed);
+				if(isDisplayed){
+					System.out.println("break statement executed");
+					break;
+				}
+				
+			} catch (Exception NoSuchElementException) {
+				// TODO: handle exception
+				scroll(1);
+				System.out.println("In catch block");
+				continue;
+			}
+			
+		} while (isDisplayed);
+	}
 	
 
     public void selectBanner() throws InterruptedException{
@@ -536,9 +559,9 @@ public class MajorFlowSanityPage extends BasePage  {
 		HashMap<String, String> ProductDetails = new HashMap<>();
 		ProductDetails.put("name", product_name);
 		ProductDetails.put("price", product_price);
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		productImage.click();
-		Thread.sleep(4000);
+		Thread.sleep(8000);
 		return ProductDetails;
 	}
 	
@@ -581,9 +604,10 @@ public class MajorFlowSanityPage extends BasePage  {
 		pdpBuyNowButton.click();
 	}
 	
-	public void itemCheckOut(){
+	public void itemCheckOut() throws InterruptedException{
 		
 		ScrolltoElementWithText("Secure Checkout");
+		//scroll(cartSecureCheckOutButton);
 		//Click on cart SECURE CECKOUT BUTTON
 		//waitgetForPageLoadAndroid(60).until(ExpectedConditions.presenceOfElementLocated(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"co.go.fynd:id/place_order\")"))).click();
 		cartSecureCheckOutButton.click();
